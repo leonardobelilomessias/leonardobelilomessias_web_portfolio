@@ -1,0 +1,15 @@
+.teste{
+
+    animation-name: luz;
+    animation-duration: 20s;
+    animation-delay: 4s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+}
+@keyframes luz {
+    0%   { right:-6rem; bottom:-4rem;width: 30rem; height: 30rem;}
+    25%  { right:20rem; bottom:-4rem;width: 20rem; height: 20rem;}
+    60%  { right:20rem; bottom:20rem;width: 10rem; height: 10rem;}
+    85%  { right:-6rem; bottom:20rem;}
+    100% { right:-6rem; bottom:-4rem;}
+  }
