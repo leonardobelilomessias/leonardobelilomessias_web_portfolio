@@ -40,21 +40,21 @@ export function Hero(){
         return () => clearInterval(interval2);
     },[])*/
     return(
-        <Stack my={'5rem'} minH={'50vh'} overflow={'hidden'} boxSizing="border-box" position={'relative'}  w='100vw' direction={'row'}>
-            <Box  display={'flex'} height='50%'  width={'50%'}  justifyContent={'center'}   >
+        <Stack my={'5rem'} minH={'50vh'} boxSizing="border-box" position={'relative'}  w='100vw' direction={'row'}>
+            <Box className={styles.shine} display={'flex'} height='50%'  width={'50%'}  justifyContent={'center'}   >
                 <Image src={Robot} priority  alt=''/>
             </Box>
-            <VStack  width={'40%'} align={'normal'}>
+            <VStack zIndex={99} width={'40%'} align={'normal'}>
                 <Text >Olá eu sou, </Text>
                 <Text color={'teal.200'} as={'h1'}  fontSize={'3xl'} fontFamily={'Inter'}>Leonardo Belilo Messias</Text>
                 <Text fontSize={['4xl','5xl','7xl']} display={'inline-block'} fontFamily={'Monda'}>{word}</Text>
-                <Text pb={4} fontSize={24}>
+                <Text textShadow={'dark-lg'} zIndex={99} pb={4} fontSize={24}>
                 Acredito que o conhecimento e a tecnologia  pode contribuir para que o ser 
                 humano possa atingir o maximo de seu potencial e bem estar e estou trabalhando
                 duro para que isso aconteça.
                 </Text>
                 
-                <Box  width={'25rem'} h='1' bg='pink.900'></Box>
+                <Box zIndex={99} width={'25rem'} h='1' bg='pink.900'></Box>
 
                 <Box 
                 className={styles.teste}
