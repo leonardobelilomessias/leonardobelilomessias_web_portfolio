@@ -21,64 +21,31 @@ function BoxImage(){
 export function Author(){
     return(
         <>
-            <Box   p={'10'} >
-                <Box 
-                border='1px'
-                rounded={'3xl'} 
-                boxShadow='3px 10px 90px rgba(0,197,294,0.6)'
-                color={'teal.200'}  
-                width={'70%'} 
-                h={'30rem'} 
-                m='auto'>
+            <Stack  p={'3'} >
+                <Box border='1px'rounded={'3xl'} boxShadow='3px 10px 90px rgba(0,197,294,0.6)'color={'teal.200'} p='4' width={['95%','70%']} h={['auto','30rem']} m='auto'>
                  
-                    <Stack direction={'row'} h='100%'>
-                        <VStack
-                        flex='1'
-                        align={'center'}
-                        justify='center'
-                        >
+                    <Stack direction={['column','row']} h='100%'>
+                        <VStack flex='1'align={'center'}justify='center'>
                             <BoxImage/>
                             <VStack>
-
-                            <Text fontSize={'2xl'} fontFamily={'Monda'}>Leonardo Belio Messias</Text>
-                            <Text>(Criador desenvolvedor)</Text>
+                                <Text fontSize={'2xl'} fontFamily={'Monda'}>Leonardo Belio Messias</Text>
+                                <Text>(Criador desenvolvedor)</Text>
                             </VStack>
                         </VStack>
 
-                        <Center 
-                        flex={'2'} 
-                        height='100%'
-                        mt={'auto'}
-                    >
-                            <Box 
-                                mt='1rem'
-                                width={'30rem'}
-                                transform='rotate(5deg)'
-                                height={'20rem'} 
-                                bgGradient='linear(to-b, rgba(0,197,294,0.5), rgba(0,197,294,0.05))'
-                                >
-                                    
-                                </Box>
-                                <Box 
-                                position={'absolute'} 
-                                mt='1rem'
-                                width={'30rem'}
-                                
-                                height={'20rem'} 
-                                bgGradient='linear(to-b, rgba(0,197,294,0.5), rgba(0,197,294,0.05))'
-                                >
-                                    <Text p={'6'}>
-                                    Diante dos ultimos dias existe uma grabde de
-                                    demanda sobre tecn lore Diante dos ultimos dias 
-                                    existe uma grabde de
-                                    demanda sobre tecn lore
+                        <Center flex={'2'} height='100%' m={'2rem'}>
+                            <Box mt='1rem'width={['18rem','30rem']}transform='rotate(5deg)'height={'20rem'} bgGradient='linear(to-b, rgba(0,197,294,0.5), rgba(0,197,294,0.05))'>
+                            </Box>
+                            <Box  position={'absolute'} m='1rem'width={['18rem','30rem']}height={'20rem'} bgGradient='linear(to-b, rgba(0,197,294,0.5), rgba(0,197,294,0.05))'>
+                                    <Text fontSize={['0.75rem','md']}  pt={'10'}  pl='1rem'>
+                                        Formação em Analise e desenvolvimento de sistemas, pesquisador em sociologia e comportamentos sociais. Fundador da Cyberchipset Desenvolvimento de Software LTDA. Especialista em Estratégias e gestão de  negócios Digitais. Criado da BaseOutside plataforma de gerenciamento,engajamento,financiamento, e divulgação de projetos sociais.  
                                     </Text>
                                 </Box>
                         </Center>
                     </Stack>
                     
-                    </Box>
-            </Box>
+                </Box>
+            </Stack>
         </>
     )
 }

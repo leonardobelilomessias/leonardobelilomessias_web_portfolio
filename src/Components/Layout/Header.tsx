@@ -1,16 +1,20 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Menu, Text } from "@chakra-ui/react";
+import { GrMenu } from "react-icons/gr";
+import { TbMenu2 } from "react-icons/tb";
 
 export function Header(){
     return(
         <HStack  bgGradient='linear(to-t,black,teal.900)'  align={'center'}>
 
-            <HStack pl='12' color={"blue.400"} height={'4rem'} width={'100%'}>
-                
-                <Text  color={'white'} fontSize={'1xl'}> Leonardo Belilo</Text>
+            <HStack justify={['space-around', 'space-between']} pl='12' color={"blue.400"} height={'4rem'} width={'100%'}>
+                <Text textAlign={'left'} color={'white'} fontSize={'1xl'}> Leonardo Belilo</Text>
+                <Box display={['block','none']}>
+                <TbMenu2 size={25} color="white" ></TbMenu2>
+                </Box>
             </HStack>
 
 
-            <HStack gap={'10'} px={'12'}>
+            <HStack display={['none','flex','flex']} gap={'10'} px={'12'}>
                 <Text fontFamily={'Monda'} color={'white'}>
                     Inicio
                 </Text>

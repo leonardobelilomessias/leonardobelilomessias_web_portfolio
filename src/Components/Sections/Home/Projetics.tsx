@@ -20,10 +20,10 @@ function BoxProject(){
 
 export function Projects(){
     return(
-        <Stack px='10' mb='5rem'>
-            <Stack px={'12'} pt='2rem' gap={5}>
-            <Text mt={'10'} mb='8' fontSize={'5xl'} fontFamily='Monda'>Projetcs</Text>
-            <Stack mt={'10rem'} justify={'space-around'} direction={'row'}>
+        <Stack mb='5rem' mt={'4rem'}  >
+            <Stack pt='2rem' >
+            <Text  mb='8' fontSize={'5xl'} pl='6' fontFamily='Monda'>Projetcs</Text>
+            <Stack p='2' gap={'2'} mt={'10rem'} flex='1' width={'100vw'} justify={['','space-around']} direction={'row'} overflow={['scroll','auto']}>
 
                 <BoxProject/>
                 <BoxProject/>
