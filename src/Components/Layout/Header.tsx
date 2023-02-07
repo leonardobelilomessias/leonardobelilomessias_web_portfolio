@@ -29,12 +29,12 @@ onClose:()=>void
 }
 function ItemMenu({children,link}:ItemMenuProps){
     const {pathname} = useRouter()
-    console.log(pathname===link)
+
     return(
         <Link href={link}>
         <Box width={'80px'} py='2' borderBottom={['1px']}  borderLeft={['1px','0px']}  borderColor={pathname===link ?'pink.900':'transparent'} borderBottomColor={['transparent',pathname===link ?'pink.900':'transparent']}>
 
-                <Text textAlign={'center'} fontFamily={'Monda'}  color={'white'}>
+                <Text textAlign={['left','center']} paddingLeft={['1rem','0rem']} fontFamily={'Monda'}  color={'white'}>
                     {children}
         
                 </Text>

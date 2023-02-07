@@ -1,4 +1,4 @@
-import { Box, Stack,Text,Flex } from "@chakra-ui/react";
+import { Box, Stack,Text,Flex, Center } from "@chakra-ui/react";
 import { Children, ReactNode } from "react";
 import {GrReactjs,GrDocker} from 'react-icons/gr'
 import {TbBrandNextjs} from 'react-icons/tb'
@@ -6,54 +6,60 @@ import {FaNodeJs} from 'react-icons/fa'
 import {DiPostgresql} from 'react-icons/di'
 import{SiTypescript} from 'react-icons/si'
 import styles from './style.module.css'
+import { useBreakpointValue } from '@chakra-ui/react'
 interface PropsBox{
     children:ReactNode
+    technology:string
+    area:string
+
 }
-function BoxContent({children}:PropsBox){
+function BoxContent({children,technology,area}:PropsBox){
     return(
         <>
-        <Box textAlign={'center'} padding={8} borderRadius='3xl' border='1px' borderColor={'teal.200'} >
+        <Stack width={['8rem','10rem']} justify={'center'}  align='center' textAlign={'center'} padding={6} fontSize={'sm'} borderRadius='3xl' border='1px' borderColor={'teal.200'} >
+        <Text color={'white'} minW='3rem'>{technology}</Text>
                 {children}
-        </Box>
+        <Text display={['none','flex']}  color={'white'}>{area}</Text>
+        </Stack>
         </>
     )
 }
+
 export function Technologies(){
+    const mobile = useBreakpointValue({
+        base:true,
+        lg:false,
+
+    })
     return(
-        <Flex flexDirection={'column'} px={['1rem','5rem']}>
-            <Text flex={1} fontFamily={'Monda'} textAlign={['center','left']} fontSize={['2xl','3xl']} p='5'>Principais tecnologias</Text>
-            <Stack wrap={'wrap'} my={'20'} mt={'1'} gap={2} justify={['space-around','space-between']} direction={'row'}>
-                <BoxContent   >
-                    <Text  textShadow={'6px 6px 10px #4FD1C5'} textAlign={'center'} color={'white'}>React</Text>
-                    <GrReactjs size={'5rem'} color='#4FD1C5'/>
-                    <Text color={'white'}>FontEnd</Text>
+        <Flex flexDirection={'column'} px={['1rem','8rem']} my={['5rem','7rem']}>
+
+            <Text flex={1} fontFamily={'Monda'} textAlign={['center','left']} mb='2' fontSize={['2xl','3xl']}  >
+                Principais tecnologias
+            </Text>
+                <Box alignSelf={['center','start']} justifySelf='center' width={'8rem'} bg='pink.900' mb='6' height={'2px'}/>
+
+            <Flex wrap={'wrap'} my={'20'} mt={'1'} gap={['2','12']} justify={['space-around','space-between']} direction={'row'} px={'8'}>
+                <BoxContent technology="React" area="FrontEnd"  >
+                    <GrReactjs size={mobile?'3rem':'5rem'} color='#4FD1C5'/>
                 </BoxContent>
-                <BoxContent >
-                    <Text color={'white'}>Nextjs</Text>
-                    <TbBrandNextjs size={'5rem'} color='#4FD1C5'/>
-                    <Text color={'white'}>FontEnd</Text>
+                <BoxContent  technology="Nextjs" area="FrontEnd">
+                    <TbBrandNextjs size={mobile?'3rem':'5rem'} color='#4FD1C5'/>
                 </BoxContent>
-                <BoxContent >
-                    <Text color={'white'}>TypeScript</Text>
-                    <SiTypescript size={'5rem'} color='#4FD1C5'/>
-                    <Text color={'white'}>FullStack</Text>
+                <BoxContent technology="TypeScript" area="FullStack" >
+                    <SiTypescript size={mobile?'3rem':'5rem'} color='#4FD1C5'/>
+
                 </BoxContent>
-                <BoxContent >
-                    <Text color={'white'}>NodeJs</Text>
-                    <FaNodeJs size={'5rem'} color='#4FD1C5'/>
-                    <Text color={'white'}>BackEnd</Text>
+                <BoxContent  technology="NodeJs" area="BackEnd">
+                    <FaNodeJs size={mobile?'3rem':'5rem'}  color='#4FD1C5'/>
                 </BoxContent>
-                <BoxContent >
-                    <Text color={'white'}>Postgress</Text>
-                    <DiPostgresql size={'5rem'} color='#4FD1C5'/>
-                    <Text color={'white'}>BackEnd</Text>
+                <BoxContent technology="Postgress" area="BackEnd" >
+                    <DiPostgresql size={mobile?'3rem':'5rem'}  color='#4FD1C5'/>
                 </BoxContent>
-                <BoxContent >
-                    <Text color={'white'}>Docker</Text>
-                    <GrDocker size={'5rem'} color='#4FD1C5'/>
-                    <Text color={'white'}>Devops</Text>
+                <BoxContent technology="Docker" area="Devops" >
+                    <GrDocker size={mobile?'3rem':'5rem'} color='#4FD1C5'/>
                 </BoxContent>
-            </Stack>
+            </Flex>
         </Flex>
     )
 }
