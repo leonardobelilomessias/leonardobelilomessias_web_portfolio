@@ -1,10 +1,10 @@
 import { Box, Stack ,Text} from "@chakra-ui/react";
 import Image from "next/image";
-import Product from '../../../../public/Images/Home/lancamento.svg'
+import Product from '../../../../public/Images/Home/launch.svg'
 
 export function Launch(){
     return(
-        <Stack  mb={['','12']}>
+        <Stack  mb={['','12']} px={['1rem','6rem']} my={['5rem','8rem']}>
             <Stack px={['','12']} pt={['','2rem']} gap={['5',5]}>
             <Text fontSize={['3xl','5xl']} fontFamily='Monda'>Lançamentos</Text>
             <Stack >

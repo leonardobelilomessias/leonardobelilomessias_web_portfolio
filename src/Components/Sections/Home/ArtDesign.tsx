@@ -29,10 +29,12 @@ export function ArtDesingn(){
     return(
         <>
         <VStack mt='12' p='8' >
-            <Text mt='12' mb='4' fontFamily={'Monda'} fontSize='6xl'>
-                Art&Design 
-            <Box alignSelf={['center','start']} justifySelf='center' width={'8rem'} bg='pink.900' mb='6' height={'2px'}/>
-            </Text>
+                <Box>
+                <Text mt='12'  fontFamily={'Monda'} fontSize='6xl'>
+                    Art&Design 
+                </Text>
+                <Box alignSelf={['center','start']} justifySelf='center' width={'8rem'} bg='pink.900' mb='6' height={'2px'}/>
+            </Box>
             <Stack align={'center'} pt='12'gap={'8'} direction={['column','row']}>
                 
                 <BoxContent  name='Ruido' img={Noise}  />

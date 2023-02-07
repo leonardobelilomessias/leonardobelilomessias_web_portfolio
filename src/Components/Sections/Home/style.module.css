@@ -1,7 +1,7 @@
 .teste{
 
     animation-name: luz;
-    animation-duration: 50s;
+    animation-duration: 30s;
     animation-delay: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -23,17 +23,17 @@
   }
   @keyframes thunder{
     0%   { filter: brightness(1);}
-    10%   { filter: brightness(1.6);}
-    15%  { filter: brightness(1);}
+    10%   { filter: brightness(1.7);}
+    15%  { filter: brightness(0.7);}
     35%  { filter: brightness(2);}
     40%  { filter: brightness(1.6);}
     55%  { filter: brightness(1);}
-    65%  { filter: brightness(1.6);}
-    75%  { filter: brightness(1);}
-    85%  { filter: brightness(1.6);}
+    65%  { filter: brightness(1.7);}
+    75%  { filter: brightness(0.6);}
+    85%  { filter: brightness(1.7);}
     95%  { filter: brightness(1);}
     96%  { filter: brightness(3);}
-    98%   { filter: brightness(1.6);}
+    98%   { filter: brightness(1.7);}
     99%   { filter: brightness(3);}
     100% { filter: brightness(1.4);}
   }
