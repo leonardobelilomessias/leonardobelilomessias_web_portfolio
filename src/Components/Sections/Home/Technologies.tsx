@@ -32,14 +32,14 @@ export function Technologies(){
 
     })
     return(
-        <Flex flexDirection={'column'} px={['1rem','8rem']} my={['5rem','7rem']}>
+        <Flex flexDirection={'column'} px={['1rem','6rem']} my={['5rem','8rem']}>
 
             <Text flex={1} fontFamily={'Monda'} textAlign={['center','left']} mb='2' fontSize={['2xl','3xl']}  >
                 Principais tecnologias
             </Text>
                 <Box alignSelf={['center','start']} justifySelf='center' width={'8rem'} bg='pink.900' mb='6' height={'2px'}/>
 
-            <Flex wrap={'wrap'} my={'20'} mt={'1'} gap={['2','12']} justify={['space-around','space-between']} direction={'row'} px={'8'}>
+            <Flex wrap={'wrap'} my={'20'} mt={'1'} gap={['2','8']} justify={['space-around','space-between']} direction={'row'} px={['8','']}>
                 <BoxContent technology="React" area="FrontEnd"  >
                     <GrReactjs size={mobile?'3rem':'5rem'} color='#4FD1C5'/>
                 </BoxContent>
