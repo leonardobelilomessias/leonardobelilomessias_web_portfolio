@@ -1,0 +1,81 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "gently"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "fully",
+    "type": "Text"
+  },
+  "introduction": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Lorem esse consequat reprehenderit officia amet esse et minim ea esse irure voluptate sunt pariatur."
+        }
+      }
+    ]
+  },
+  "cover": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+      "width": 3935,
+      "height": 5894
+    },
+    "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+    "width": 3935,
+    "height": 5894,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "bodypost": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Consequat fugiat consequat amet esse deserunt. Est cillum nostrud proident sint irure non elit Lorem. Ipsum eiusmod fugiat commodo ipsum commodo anim elit ea duis aliquip dolore excepteur in."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "content",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Irure labore eu non adipisicing irure elit ad tempor nulla ullamco et sit. Aliqua sint sint irure enim voluptate sunt."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

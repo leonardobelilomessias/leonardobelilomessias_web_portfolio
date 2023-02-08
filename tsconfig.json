@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/services/prismic.ts","./.slicemachine/prismicio.d.ts"],
   "exclude": ["node_modules"]
 }
