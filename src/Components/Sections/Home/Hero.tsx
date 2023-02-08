@@ -10,7 +10,6 @@ export function Hero(){
 
     useEffect(()=>{
         const interval = setInterval(()=>{
-            
 
             setWord((w)=>{
                 let index = words.indexOf(w)+1
@@ -26,7 +25,7 @@ export function Hero(){
 
         return () => clearInterval(interval);
 
-    },[])
+    },[words])
     useEffect(()=>{
 
         const interval2 = setInterval(()=>{

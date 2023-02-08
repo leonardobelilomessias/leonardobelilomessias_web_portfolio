@@ -9,9 +9,39 @@ import { Launch } from '../Components/Sections/Home/Launch'
 import { Quote } from '../Components/Sections/Home/Quote'
 import { PostsHome } from '../Components/Sections/Home/PostsHome'
 import { ArtDesingn } from '../Components/Sections/Home/ArtDesign'
+import type { GetStaticPropsContext } from 'next'
+import { useRouter } from "next/router";
+import { CgArrowLongRight } from "react-icons/cg";
+import { createClient } from '../services/prismic'
+
+interface BodyPostProps{
+  title:{
+      text:string
+  }[]
+  content:{
+      text:string
+  }[]
+}
+interface PostProps{
+  id: string,
+  uid: string,
+  last_publication_date: string
+  data: {
+    title: string
+    introduction:{text:string}[]
+    cover: {
+      url:string
+    }
+    bodypost: BodyPostProps[]
+  }
+}[]
+interface dataProps{
+  data:PostProps[]
+}
 
 
-export default function Home() {
+export default function Home({data}:dataProps) {
+  
   return (
     <>
       <Head> 
@@ -26,10 +56,33 @@ export default function Home() {
         <Projects/>
         <Launch/>
         <Quote/>
-        <PostsHome/>
+        <PostsHome  data={data}/>
         <ArtDesingn/>
         
       </Box>
     </>
   )
+}
+
+export async function getStaticProps({
+  previewData,
+}: GetStaticPropsContext) {
+  const client = createClient({ previewData })
+  //    ^ Automatically contains references to document types
+
+  const {results}= await client.getByType('post')
+
+  const data = results
+  //    ^ Typed as PageDocument
+  results.forEach(post=>{
+      //console.log(post.data.introduction)
+  })
+  console.log(data)
+
+  return {
+    props: {
+      data,
+      person:{name:'leonardo'}
+    },
+  }
 }

@@ -1,5 +1,7 @@
-import { Box, Button, Flex, Heading, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 import type { GetStaticPropsContext } from 'next'
+import { useRouter } from "next/router";
+import { CgArrowLongRight } from "react-icons/cg";
 import { createClient } from '../../services/prismic'
 
 interface BodyPostProps{
@@ -28,39 +30,48 @@ interface dataProps{
 }
 interface renderPostProps{
     title:string
-    content:string
+    content:string,
+    link:string
 }
-function BoxPost({title, content}:renderPostProps){
+function BoxPost({title, content,link}:renderPostProps){
+    const {push,pathname,} = useRouter()
+    
     return(
 
-            <Box  my='2rem' flexDirection={'column'}>
-                <Text  fontSize={'3xl'} fontWeight={'bold'}>{title}</Text>
-                <Text maxWidth={'150ch'} overflow='hidden' textOverflow={'ellipsis'} whiteSpace='nowrap'>{content}</Text>
-                <Button justifySelf={'flex-end'} colorScheme={'teal'}>Continue lendo</Button>
+            <Box  mb='5rem'  flexDirection={'column'}>
+                <Text  fontSize={['','3xl']} fontWeight={'bold'}>{title}</Text>
+                <Text maxWidth={['200ch','150ch']} overflow='hidden' textOverflow={'ellipsis'} whiteSpace={['pre-wrap','nowrap']}>{content}</Text>
+                <HStack cursor={'pointer'} onClick={()=>push(`${pathname}/${link}`)} display='flex' flexDirection='row'    _hover={{color:'pink.500',textDecor:'undeline'}}>
+
+                <Text textDecor={'underline'} as='a' my='3' justifySelf={'flex-end'} colorScheme={'teal'}  >Continue lendo</Text> <CgArrowLongRight size={20} color="#00C5E0"></CgArrowLongRight> 
+                </HStack>
             </Box>
 
     )
 }
 export default function Blog({data}:dataProps){
- //console.log(data[0])
+
 
     return(
     <>
-    <Flex p='8rem' flexDir={'column'}>
+    <Flex px={['','8rem' ]} py='4rem' justify={'center'} flexDir={'column'}>
 
-        <Heading width={'100%'} >
-            Blog
-        </Heading>
+        <Box px={['','8rem' ]} textAlign='center' >
+            
+            <Text p={['','2']} display={'inline-block'} fontSize={'4xl'} fontFamily={'Monda,sans-serif'} fontWeight='bold'  borderBottom={'1px'} borderColor='pink.700'>
+                Blog
+            </Text>
+        </Box>
         
-        <Stack  p='10rem'>
+        <Box  px={['8','10rem'] }py='8rem'>
 
             {
                 data.map(post=>(
-                    <BoxPost title={post.data.title} content={post.data.introduction[0].text}/>
+                    <BoxPost title={post.data.title} key={post.data.title} link={post.uid} content={post.data.introduction[0].text}/>
 
                 ))
             }
-        </Stack>
+        </Box>
     </Flex>
     </>
     )
@@ -73,6 +84,7 @@ export async function getStaticProps({
     //    ^ Automatically contains references to document types
   
     const {results}= await client.getByType('post')
+
     const data = results
     //    ^ Typed as PageDocument
     results.forEach(post=>{

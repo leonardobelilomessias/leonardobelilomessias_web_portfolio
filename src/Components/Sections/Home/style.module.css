@@ -16,22 +16,22 @@
 
   .shine{
     animation-name: thunder;
-    animation-duration: 10s;
-    animation-delay: 2s;
+    animation-duration: 8s;
+    animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
   @keyframes thunder{
     0%   { filter: brightness(1);}
     10%   { filter: brightness(1.7);}
-    15%  { filter: brightness(0.7);}
+    15%  { filter: brightness(0.5);}
     35%  { filter: brightness(2);}
-    40%  { filter: brightness(1.6);}
-    55%  { filter: brightness(1);}
+    40%  { filter: brightness(1.7);}
+    55%  { filter: brightness(0.7);}
     65%  { filter: brightness(1.7);}
-    75%  { filter: brightness(0.6);}
+    75%  { filter: brightness(0.5);}
     85%  { filter: brightness(1.7);}
-    95%  { filter: brightness(1);}
+    95%  { filter: brightness(0.7);}
     96%  { filter: brightness(3);}
     98%   { filter: brightness(1.7);}
     99%   { filter: brightness(3);}

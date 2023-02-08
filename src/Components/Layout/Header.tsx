@@ -109,7 +109,7 @@ export function Header(){
     const { isOpen, onOpen, onClose } = useDisclosure()
     useEffect(()=>{
         onClose()
-    },[pathname])
+    },[pathname,onClose])
     
     return(
         <HStack  bgGradient='linear(to-t,black,teal.900)'  align={'center'} justify='space-between'>
