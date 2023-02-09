@@ -77,7 +77,7 @@ export async function getStaticProps({
   results.forEach(post=>{
       //console.log(post.data.introduction)
   })
-  console.log(data)
+
 
   return {
     props: {
