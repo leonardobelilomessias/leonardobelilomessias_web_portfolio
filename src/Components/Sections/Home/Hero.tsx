@@ -50,10 +50,8 @@ export function Hero(){
                 <Text  textAlign={['center','left']} >Olá eu sou, </Text>
                 <Text color={'teal.500'} as={'h1'} fontWeight='bold' textAlign={['center','left']}  fontSize={['1.2rem','3xl']}  zIndex='banner' fontFamily={'Inter'}>Leonardo Belilo Messias</Text>
                 <Text textAlign={['center','left']}  fontSize={['5xl','5xl','7xl']} display={'inline-block'} fontFamily={'Monda'}>{word}</Text>
-                <Text textShadow={'dark-lg'} zIndex={99} pb={4} px='5' textAlign={['center','left']}  fontSize={['md','md','x-large']}>
-                Acredito que o conhecimento e a tecnologia  pode contribuir para que o ser 
-                humano possa atingir o maximo de seu potencial e bem estar e estou trabalhando
-                duro para que isso aconteça.
+                <Text textShadow={'dark-lg'} zIndex={'banner'} pb={4} textAlign={['center','left']}  fontSize={['md','md','x-large']}>
+                Desenvolvimento de ferramentas e projetos com tecnologia de ponta, para auxiliar pessoas a atingir o máximo de seu potêncial, e alcançar resultados concretos e de alto nível.
                 </Text>
                 
                 <Box zIndex={99} display={['none','block']} width={'25rem'} h='1' bg='pink.900'></Box>

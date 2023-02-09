@@ -51,8 +51,8 @@ export default function About(){
                         Background
                     </Text>
                     <Text  fontFamily={'inter'}>
-                        Formado em Analise de Dessenvolvimento de Sistemas, estudante de sociologia com experiência na gestão de projetos aplicados ao equilibrio bem estar social. 
-                        Pesquisador em comportamento humano relacionado tecnologia, alto desempenho e mercado com ênfase em resultados. Propietario da Cyber Chipset Desenvolvimento de Software LTDA,e empreendedor
+                    Formado em Análise de Desenvolvimento de Sistemas, estudante de sociologia com experiência na gestão de projetos aplicados ao equilíbrio bem-estar social. 
+                        Pesquisador em comportamento humano relacionado tecnologia, alto desempenho e mercado com ênfase em resultados. Propietario da Cyber Chipset Desenvolvimento de Software Ltda, e empreendedor
                         social pela BaseOutside.
                     </Text>
                 </Box>
@@ -66,24 +66,24 @@ export default function About(){
 
 const softData = [
     {
-        subtitle:"Empatia",content:'Entender um desejo para atender uma necessiade sempre se colocando no lugar do outro para compreender os diferentes pontos de vista'
+        subtitle:"Empatia",content:'Entender um desejo para atender uma necessidade sempre se colocando no lugar do outro para compreender os diferentes pontos de vista'
     }, 
     {
-        subtitle:"Compromisso",content:'Garantir que o projeto,ou tarefa seja executa em tempo estipulado, para que ambas partes interçadas sejam satisfeitas.'
+        subtitle:"Compromisso",content:'Garantir que o projeto,ou tarefa seja executa em tempo estipulado, para que ambas partes interessadas sejam satisfeitas.'
     },
     {
-        subtitle:"Comunicação",content:'Comunicar de forma clara e transparente de maneira que reduza os ruidos de informação em dialogos ou em qualquer tipo de comunicação. Garantindo a acertividade nos processos'
+        subtitle:"Comunicação",content:'Comunicar de forma clara e transparente de maneira que reduza os ruídos de informação em diálogos ou em qualquer tipo de comunicação. Garantindo a assertividade nos processos.'
     }
 ]
 const hardData = [
     {
-        subtitle:"Desenvolvimento de Web",content:'solidos conhecimentos em html e css na produção de paginas responsivas e dinamicas. Dominio na linguagem javascript com a utilização da biblioteca React e  framework next js  para criação de websites com seo avançado.'
+        subtitle:"Desenvolvimento de Web",content:'sólidos conhecimentos em HTML e CSS na produção de paginas responsivas e dinâmicas. Domínio na linguagem javascript com a utilização da biblioteca React e framework Next js para criação de websites com SEO avançado.'
     }, 
     {
-        subtitle:"Desenvolvimento de Mobile",content:'Desenvolvimento de aplicativos cross platavorm(ios e android) com a tecnologia react native  unida com bibliotecas como styled-componets.'
+        subtitle:"Desenvolvimento de Mobile",content:'Desenvolvimento de aplicativos cross plataform(ios e android) com a tecnologia React Native  unida com bibliotecas como styled-componets.'
     },
     {
-        subtitle:"Clean Code",content:'Implementação de tecnicas e padrões de escrita de codigo de forma que sejam de facil legibilidade e manutenção . Assim otimizando o processo de construção de software.'
+        subtitle:"Clean Code",content:'Implementação de técnicas e padrões de escrita de código de forma que sejam de fácil legibilidade e manutenção . Assim otimizando o processo de construção de software.'
 
     },
     {
@@ -91,7 +91,7 @@ const hardData = [
 
     },
     {
-        subtitle:"Api  Rest",content:'Desenvolvimento e consumo de apis rest escaláveis implementando metodos e protocolos de forma a extrair o maximo da arquitetura.'
+        subtitle:"Api  Rest",content:'Desenvolvimento e consumo de apis rest escaláveis implementando métodos e protocolos de forma a extrair o máximo da arquitetura.'
 
     },
     {

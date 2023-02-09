@@ -1,8 +1,11 @@
-import {Avatar, Stack,Box, Center, VStack, Text } from "@chakra-ui/react";
+import {Avatar, Stack,Box, Center, VStack, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { CgArrowLongRight, CgArrowLongRightC } from "react-icons/cg";
 import Profile from '../../../../public/Images/Home/profile.svg'
 
 function BoxImage(){
+    
     return(
     <>
         <Box alignContent={'center'} justifyContent='center' position={'relative'} justifyItems={'center'} width={'13rem'} height='13rem' >
@@ -19,6 +22,7 @@ function BoxImage(){
 }
 
 export function Author(){
+    const {push} = useRouter()
     return(
         <>
             <Stack  p={'3'} >
@@ -38,8 +42,10 @@ export function Author(){
                             </Box>
                             <Box  position={'absolute'} m='1rem'width={['18rem','30rem']}height={'20rem'} bgGradient='linear(to-b, rgba(0,197,294,0.5), rgba(0,197,294,0.05))'>
                                     <Text fontSize={['0.75rem','md']}  pt={'10'}  pl='1rem'>
-                                        Formação em Analise e desenvolvimento de sistemas, pesquisador em sociologia e comportamentos sociais. Fundador da Cyberchipset Desenvolvimento de Software LTDA. Especialista em Estratégias e gestão de  negócios Digitais. Criado da BaseOutside plataforma de gerenciamento,engajamento,financiamento, e divulgação de projetos sociais.  
+                                        Formação em Análise e Desenvolvimento de Sistemas, pesquisador estudante em sociologia e comportamentos sociais. Fundador da Cyberchipset Desenvolvimento de Software LTDA. Especialista em Estratégias e gestão de  negócios Digitais. Criado da BaseOutside plataforma de gerenciamento,engajamento,financiamento, e divulgação de projetos sociais.  
                                     </Text>
+
+                                    <Button m='2rem' colorScheme={"pink"} size={'sm'} onClick={()=>{push('/about')}} rightIcon={<CgArrowLongRight/>}>Saber mais </Button>
                                 </Box>
                         </Center>
                     </Stack>

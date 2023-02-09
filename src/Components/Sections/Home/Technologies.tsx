@@ -35,7 +35,7 @@ export function Technologies(){
         <Flex flexDirection={'column'} px={['1rem','6rem']} my={['5rem','8rem']}>
 
             <Text flex={1} fontFamily={'Monda'} textAlign={['center','left']} mb='2' fontSize={['2xl','3xl']}  >
-                Principais tecnologias
+                Principais Tecnologias
             </Text>
                 <Box alignSelf={['center','start']} justifySelf='center' width={'8rem'} bg='pink.900' mb='6' height={'2px'}/>
 

@@ -49,21 +49,21 @@ export function PostsHome({data}:dataProps){
                     <Box rounded={"1rem"} h={['14rem']} minW={['90vw','30rem']} flex={'1'}    position='relative' >
                     <Image src={infoPost[0].image} alt='' fill style={{objectFit:"cover",borderRadius:"1rem"}}/>
                     </Box>
-                    <Text _hover={{cursor:"pointer", color:'teal.400'}}  fontSize={'2xl'}>{infoPost[0].title}</Text>
+                    <Text _hover={{cursor:"pointer", color:'teal.400'}} fontWeight='bold' fontSize={['medium','2xl']}>{infoPost[0].title}</Text>
                 </Box>
 
                 <Box rounded={"1rem"} h={'20rem'}  minW={['100%','60rem']} flex='1'   position='relative' _hover={{cursor:"pointer"}} onClick={()=>push(`/blog/${infoPost[1].url}`)} >
                     <Box rounded={"1rem"} h={'14rem'}  minW={['100%','60rem']} flex='1'   position='relative'>
                     <Image src={infoPost[1].image} alt='' fill style={{objectFit:"cover",borderRadius:"1rem"}}/>
                     </Box>
-                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontSize={'2xl'}>{infoPost[1].title}</Text>
+                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontWeight='bold' fontSize={['medium','2xl']}>{infoPost[1].title}</Text>
                 </Box>
 
-                <Box rounded={"1rem"} h={'20rem'}  minW={['100%','50rem']} flex='1'  position='relative' _hover={{cursor:"pointer"}} onClick={()=>push(`/blog/${infoPost[2].url}`)} >
-                    <Box rounded={"1rem"} h={'14rem'}  minW={['100%','50rem']} flex='1'  position='relative'>
+                <Box rounded={"1rem"} h={'20rem'}  minW={['100%','40rem']} flex='1'  position='relative' _hover={{cursor:"pointer"}} onClick={()=>push(`/blog/${infoPost[2].url}`)} >
+                    <Box rounded={"1rem"} h={'14rem'}  minW={['100%','40rem']} flex='1'  position='relative'>
                     <Image src={infoPost[2].image} alt='' fill style={{objectFit:"cover",borderRadius:"1rem"}}/>
                     </Box>
-                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontSize={'2xl'}>{infoPost[2].title}</Text>
+                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontWeight='bold' fontSize={['medium','2xl']}>{infoPost[2].title}</Text>
 
                 </Box>
 
@@ -71,7 +71,7 @@ export function PostsHome({data}:dataProps){
                     <Box rounded={"1rem"} h={'14rem'}  minWidth={['100%','40rem']}    position='relative'>
                     <Image src={infoPost[3].image} alt='' fill style={{objectFit:"cover",borderRadius:"1rem"}}/>
                     </Box>
-                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontSize={'2xl'}>{infoPost[3].title}</Text>
+                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontWeight='bold' fontSize={['medium','2xl']}>{infoPost[3].title}</Text>
 
                 </Box>
 
@@ -79,20 +79,20 @@ export function PostsHome({data}:dataProps){
                     <Box rounded={"1rem"} h={'14rem'}flex='1' minWidth={['100%','20rem']}    position='relative'>
                         <Image src={infoPost[4].image} alt='' fill style={{objectFit:"cover",borderRadius:"1rem"}}/>
                     </Box>
-                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontSize={'2xl'}>{infoPost[4].title}</Text>
+                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontWeight='bold' fontSize={['medium','2xl']}>{infoPost[4].title}</Text>
                 </Box>
 
                 <Box rounded={"1rem"} h={'20rem'} flex='1' minWidth={['100%','20rem']}     position='relative' _hover={{cursor:"pointer"}} onClick={()=>push(`/blog/${infoPost[5].url}`)} >
                     <Box rounded={"1rem"} h={'14rem'} flex='1' minWidth={['100%','20rem']}     position='relative'>
                         <Image src={infoPost[5].image} alt='' fill style={{objectFit:"cover",borderRadius:"1rem"}}/>
                     </Box>
-                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontSize={'2xl'}>{infoPost[5].title}</Text>
+                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontWeight='bold' fontSize={['medium','2xl']}>{infoPost[5].title}</Text>
                 </Box>
                 <Box rounded={"1rem"} h={'20rem'} flex='1' minWidth={['100%','20rem']}     position='relative' _hover={{cursor:"pointer"}} onClick={()=>push(`/blog/${infoPost[6].url}`)} >
                     <Box rounded={"1rem"} h={'14rem'} flex='1' minWidth={['100%','20rem']}     position='relative'>
                         <Image src={infoPost[6].image} alt='' fill style={{objectFit:"cover",borderRadius:"1rem"}}/>
                     </Box>
-                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontSize={'2xl'}>{infoPost[6].title}</Text>
+                    <Text _hover={{cursor:"pointer", color:'teal.400'}}   fontWeight='bold' fontSize={['medium','2xl']}>{infoPost[6].title}</Text>
                 </Box>
             </Flex>
             <Link href={'/blog'}>

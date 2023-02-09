@@ -6,7 +6,8 @@ export const theme = extendTheme({
     global:{
       body:{
         bg:'black',
-        color:'white'
+        color:'white',
+        fontFamily:'Inter'
       }
     }
   }
