@@ -5,11 +5,11 @@ import { title } from "@prismicio/helpers/dist/isFilled";
 function BoxDescription({subtitle,content}:{subtitle:string, content:string}){
     return(
     <>
-        <Box  mb='2rem' px={'2rem'}  flexDirection={'column'}>
-            <Text fontWeight={'bold'} fontSize={'1.5rem'} my='3' fontFamily={'Inter , sans-serif'}  justifySelf={'flex-end'} >
+        <Box  mb='2rem' px={['','2rem']}  flexDirection={'column'}>
+            <Text fontWeight={'bold'} fontSize={['2xl','1.5rem']} my='3' fontFamily={'Inter , sans-serif'}  justifySelf={'flex-end'} >
             {subtitle}
             </Text> 
-            <Text fontFamily={'Inter'} pr='25rem'>
+            <Text fontFamily={'Inter'} pr={['','25rem']}>
                 {content}
             </Text>
         </Box>
@@ -21,7 +21,7 @@ function BoxContent({title,data}:{title:string,data:{subtitle:string,content:str
     return(
     <>
     <Box  pb='2rem'>
-            <Text fontFamily={'Monda , sans-serif'}   fontSize={['','3xl']} fontWeight={'bold'} borderBottom={'1px'} borderColor='teal.400'>
+            <Text fontFamily={'Monda , sans-serif'}   fontSize={['5xl','3xl']} fontWeight={'bold'} borderBottom={'1px'} borderColor='teal.400'>
                 {title}
             </Text>
         {data.map(item=>(
@@ -36,7 +36,7 @@ function BoxContent({title,data}:{title:string,data:{subtitle:string,content:str
 export default function About(){
     return(
         <>
-        <Flex px={['','25rem' ]} py='4rem' justify={'center'} flexDir={'column'}>
+        <Flex px={['2rem','25rem' ]} py={['4rem']} justify={'center'} flexDir={'column'}>
     
             <Box px={['','16rem' ]} textAlign='center' >
                 
@@ -45,9 +45,9 @@ export default function About(){
                 </Text>
             </Box>
             
-            <Box pt='8rem'>
+            <Box pt={['4rem','8rem']}>
                 <Box  mb='5rem'  flexDirection={'column'}>
-                    <Text  fontSize={['','3xl']} fontWeight={'bold'}  borderBottom={'1px'} borderColor='teal.400'>
+                    <Text  fontSize={['5xl','3xl']} fontWeight={'bold'} fontFamily='Monda' borderBottom={'1px'} borderColor='teal.400'>
                         Background
                     </Text>
                     <Text  fontFamily={'inter'}>

@@ -38,8 +38,8 @@ function BoxPost({title, content,link}:renderPostProps){
     
     return(
 
-            <Box  mb='5rem'  flexDirection={'column'}>
-                <Text  fontSize={['','3xl']} fontWeight={'bold'}>{title}</Text>
+            <Box  mb='5rem'  flexDirection={'column'} onClick={()=>push(`${pathname}/${link}`)} >
+                <Text  fontSize={['3xl','3xl']} fontWeight={'bold'}>{title}</Text>
                 <Text maxWidth={['200ch','150ch']} overflow='hidden' textOverflow={'ellipsis'} whiteSpace={['pre-wrap','nowrap']}>{content}</Text>
                 <HStack cursor={'pointer'} onClick={()=>push(`${pathname}/${link}`)} display='flex' flexDirection='row'    _hover={{color:'pink.500',textDecor:'undeline'}}>
 

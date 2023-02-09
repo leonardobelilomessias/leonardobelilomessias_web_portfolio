@@ -1,11 +1,15 @@
 import { Box, Button, Center, Stack, Text, VStack } from "@chakra-ui/react"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import Robot from '../../../../public/Images/Home/hands2.svg'
 import styles from './style.module.css'
 export function Hero(){
+    const words = useMemo(()=>{
+        const words = ["Desenvolvedor","Design","Empreendedor","Pensador","Estrategista", "Pesquisador","Analista"]
+        return words
+    },[])
     const [word,setWord] = useState('Desenvolvedor')
-    const words = ["Desenvolvedor","Design","Empreendedor","Pensador","Estrategista", "Pesquisador","Analista"]
+    
     const [letters,setLetters] = useState(word[0])
 
     useEffect(()=>{
