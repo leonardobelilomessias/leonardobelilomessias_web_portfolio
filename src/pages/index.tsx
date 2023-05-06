@@ -9,7 +9,7 @@ import { Launch } from '../Components/Sections/Home/Launch'
 import { Quote } from '../Components/Sections/Home/Quote'
 import { PostsHome } from '../Components/Sections/Home/PostsHome'
 import { ArtDesingn } from '../Components/Sections/Home/ArtDesign'
-import type { GetStaticPropsContext } from 'next'
+import type { GetStaticProps, GetStaticPropsContext } from 'next'
 import { useRouter } from "next/router";
 import { CgArrowLongRight } from "react-icons/cg";
 import { createClient } from '../services/prismic'
@@ -64,9 +64,9 @@ export default function Home({data}:dataProps) {
   )
 }
 
-export async function getStaticProps({
+export const  getStaticProps :GetStaticProps = async ({
   previewData,
-}: GetStaticPropsContext) {
+}: GetStaticPropsContext) =>{
   const client = createClient({ previewData })
   //    ^ Automatically contains references to document types
 
@@ -84,5 +84,6 @@ export async function getStaticProps({
       data,
       person:{name:'leonardo'}
     },
+    revalidate:60*60*24
   }
 }

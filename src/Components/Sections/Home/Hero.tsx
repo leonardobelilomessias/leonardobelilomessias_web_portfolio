@@ -5,7 +5,7 @@ import Robot from '../../../../public/Images/Home/hands2.svg'
 import styles from './style.module.css'
 export function Hero(){
     const words = useMemo(()=>{
-        const words = ["Desenvolvedor","Design","Empreendedor","Pensador","Estrategista", "Pesquisador","Analista"]
+        const words = ["Desenvolvedor","Design","Empreendedor","Consultor", "Pesquisador","Analista"]
         return words
     },[])
     const [word,setWord] = useState('Desenvolvedor')
